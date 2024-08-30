@@ -19,58 +19,139 @@ const perguntas = [
         ]
     },
     {
-        enunciado: "Com a descoberta desta tecnologia, chamada Inteligência Artificial, uma professora de tecnologia da escola decidiu fazer uma sequência de aulas sobre esta tecnologia. No fim de uma aula ela pede que você escreva um trabalho sobre o uso de IA em sala de aula. Qual atitude você toma?",
+        enunciado: "A síndrome de burnout é um estado de exaustão emocional, física e mental causado por estresse prolongado no trabalho, levando à sensação de desânimo e diminuição da performance. Você sente que está experimentando sinais de burnout no seu trabalho?",
         alternativas: [
             {
-                texto: "Utiliza uma ferramenta de busca na internet que utiliza IA para que ela ajude a encontrar informações relevantes para o trabalho e explique numa linguagem que facilite o entendimento.",
+                texto: "Sim",
                 afirmacao: "Afirmação"
             },
             {
-                texto: "Escreve o trabalho com base nas conversas que teve com colegas, algumas pesquisas na internet e conhecimentos próprios sobre o tema.",
+                texto: "Não",
                 afirmacao: "Afirmação"
             }
         ]
     },
     {
-        enunciado: "Após a elaboração do trabalho escrito, a professora realizou um debate entre a turma para entender como foi realizada a pesquisa e escrita. Nessa conversa também foi levantado um ponto muito importante: como a IA impacta o trabalho do futuro. Nesse debate, como você se posiciona?",
+        enunciado: "Você sente que seu trabalho está afetando sua saúde física e mental?",
         alternativas: [
             {
-                texto: "Defende a ideia de que a IA pode criar novas oportunidades de emprego e melhorar habilidades humanas.",
+                texto: "Muito",
                 afirmacao: "Afirmação"
             },
             {
-                texto: "Me preocupo com as pessoas que perderão seus empregos para máquinas e defendem a importância de proteger os trabalhadores.",
+                texto: "Nunca",
                 afirmacao: "Afirmação"
             }
         ]
     },
     {
-        enunciado: "Ao final da discussão, você precisou criar uma imagem no computador que representasse o que pensa sobre IA. E agora?",
+        enunciado: "Você percebe uma discrepância entre suas expectativas sobre o trabalho e a realidade que está vivenciando?",
         alternativas: [
             {
-                texto: "Criar uma imagem utilizando uma plataforma de design como o Paint.",
+                texto: "Sim",
                 afirmacao: "Afirmação"
             },
             {
-                texto: "Criar uma imagem utilizando um gerador de imagem de IA.",
+                texto: "Não",
                 afirmacao: "Afirmação"
             }
         ]
     },
+   
     {
-        enunciado: "Você tem um trabalho em grupo de biologia para entregar na semana seguinte, o andamento do trabalho está um pouco atrasado e uma pessoa do seu grupo decidiu fazer com ajuda da IA. O problema é que o trabalho está totalmente igual ao do chat. O que você faz? ",
+        enunciado: "Você sente que há uma falta de clareza sobre suas responsabilidades e expectativas no trabalho?",
         alternativas: [
             {
-                texto: "Escrever comandos para o chat é uma forma de contribuir com o trabalho, por isso não é um problema utilizar o texto inteiro.",
+                texto: "Sim",
                 afirmacao: "Afirmção"
             },
             {
-                texto: "O chat pode ser uma tecnologia muito avançada, mas é preciso manter a atenção pois toda máquina erra, por isso revisar o trabalho e contribuir com as perspectivas pessoais é essencial.",
+                texto: "Não",
+                afirmacao: "Afirmação"
+            }
+        ]
+    },
+    {
+        enunciado: "Você acha que as demandas do trabalho estão progressivamente ultrapassando seus limites pessoais e profissionais?",
+        alternativas: [
+            {
+                texto: "Sim",
+                afirmacao: "Afirmção"
+            },
+            {
+                texto: "Não",
+                afirmacao: "Afirmação"
+            }
+        ]
+    },
+    {
+        enunciado: "Você nota um aumento significativo na sensação de desesperança sobre a sua situação profissional ou o futuro? ",
+        alternativas: [
+            {
+                texto: "Sim",
+                afirmacao: "Afirmção"
+            },
+            {
+                texto: "Não",
+                afirmacao: "Afirmação"
+            }
+        ]
+    },
+    {
+        enunciado: "Você acha que sua capacidade de manter um bom relacionamento com a equipe está sendo prejudicada por seu nível de estresse? ",
+        alternativas: [
+            {
+                texto: "Sim",
+                afirmacao: "Afirmção"
+            },
+            {
+                texto: "Não",
+                afirmacao: "Afirmação"
+            }
+        ]
+    },
+    {
+        enunciado: "Você acredita que o reconhecimento e o apoio que recebe no trabalho são insuficientes para suas necessidades? ",
+        alternativas: [
+            {
+                texto: "Sim",
+                afirmacao: "Afirmção"
+            },
+            {
+                texto: "Não",
+                afirmacao: "Afirmação"
+            }
+        ]
+    },
+    {
+        enunciado: "Você tem dificuldade em reconhecer e aproveitar momentos de sucesso ou realizações no trabalho? ",
+        alternativas: [
+            {
+                texto: "Sim",
+                afirmacao: "Afirmção"
+            },
+            {
+                texto: "Não",
+                afirmacao: "Afirmação"
+            }
+        ]
+    },
+    {
+        enunciado: "Você sente que sua identidade pessoal ou profissional está sendo afetada negativamente pelo ambiente de trabalho?",
+        alternativas: [
+            {
+                texto: "Sim",
+                afirmacao: "Afirmção"
+            },
+            {
+                texto: "Não",
                 afirmacao: "Afirmação"
             }
         ]
     },
 ];
+
+
 
 
 let atual = 0;
@@ -99,13 +180,13 @@ function mostraAlternativas(){
 
 function respostaSelecionada(opcaoSelecionada) {
     const afirmacoes = opcaoSelecionada.afirmacao;
-    historiaFinal += afirmacoes + " ";
+    
     atual++;
     mostraPergunta();
 }
 
 function mostraResultado() {
-    caixaPerguntas.textContent = "Em 2049...";
+    caixaPerguntas.textContent = "Essas perguntas foram para uma pesquisa, se você sente que pode ter este problema, recorrer à um médico ou psicólogo, Obrigada pela atenção!";
     textoResultado.textContent = historiaFinal;
     caixaAlternativas.textContent = "";
 }
